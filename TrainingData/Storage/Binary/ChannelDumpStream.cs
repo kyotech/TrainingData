@@ -60,7 +60,7 @@ namespace TrainingData.Storage.Binary
             return new ChannelMessage(channelBlock);
         }
 
-        public IEnumerator<ChannelMessage> ReadMessages()
+        public IEnumerable<ChannelMessage> ReadMessages()
         {
             if(stream.Length < 20)
                 throw new EndOfStreamException("No Messages in binary dump!");
